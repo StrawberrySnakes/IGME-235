@@ -1,4 +1,43 @@
 /* It starts completely empty. I wish you luck. */
+ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: center;
+}
+.menu a {
+    display: block;
+    background: gray;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+.menu li {
+    width: 25%;
+}
+.menu a:hover {
+	background: red;
+	color: yellow;
+}
+ul.menu ul li {
+    width:100%;
+}
+ul.menu ul {
+    display:none;
+}
+ul.menu li:hover ul {
+    display:flex;
+}
+
+.menu .submenu li>a:hover {
+    background:red;
+    color:yellow;
+}
+.menu .submenu>a:after {
+    content: "+";
+    padding-left:5px;
+}
 
 body {
     margin: 1rem;
@@ -40,5 +79,11 @@ footer { grid-area: footer; }
                             "playground playground"
                             "footer     footer";
     }
+}
+
+@media screen and (max-width: 550px) {
+	.menu li {
+		width: 100%;
+	}
 }
 
